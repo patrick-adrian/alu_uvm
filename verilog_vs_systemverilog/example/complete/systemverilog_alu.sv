@@ -4,10 +4,13 @@
 
 // Same DUT (Verilog-compatible)
 module alu (
+    //`logic` type → no need to decide between wire/reg
     input  logic [7:0] a, b,
     input  logic [2:0] op,
     output logic [7:0] result
 );
+    //✅ `always_comb` → automatically detects 
+    //sensitivity list
     always_comb begin
         case (op)
             3'b000: result = a + b;
@@ -38,6 +41,10 @@ class ALU_Transaction;
         endcase
     endfunction
 endclass
+
+//✅ Classes & randomization (object-oriented testbench)
+//✅ Assertions (`assert`) and functional coverage support
+//✅ Reusable testbench structure — step toward UVM
 
 module tb_alu_sv;
     logic [7:0] a, b;
