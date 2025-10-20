@@ -1,5 +1,5 @@
 //====================
-// Level 2: SystemVerilog
+// Level 2: SystemVerilog — Adds OOP, Randomization, Assertions
 //====================
 
 // Same DUT (Verilog-compatible)

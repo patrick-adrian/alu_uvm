@@ -18,3 +18,4 @@ class alu_seq extends uvm_sequence #(alu_transaction);
 endclass
 
 //test many corner cases automatically
+

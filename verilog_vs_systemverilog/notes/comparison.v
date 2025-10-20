@@ -57,4 +57,5 @@ endmodule
 // 6. Assertions
 assert property (@(posedge clk) req |-> ##1 gnt);
 
-//“Whenever req happens, gnt must follow 1 cycle later.”
+// “Whenever req happens, gnt must follow 1 cycle later.”
+// if not, sim flags error
