@@ -50,9 +50,14 @@ module tb_alu;
 
         //monitor is a system task that continously
         //prints values when any signals change
+
+                //%0t prints simulation time
+                        //%0d decimal format
+                                    //%b binary format
         $monitor("time=%0t a=%0d b=%0d op=%b result=%0d", $time, a, b, op, result);
         a = 8'd10; b = 8'd3;
 
+                    //#10: wait 10 time units
         op = 3'b000; #10;
         op = 3'b001; #10;
         op = 3'b010; #10;
